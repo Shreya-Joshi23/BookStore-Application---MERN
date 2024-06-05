@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "name": "To Kill a Mockingbird",
+        "price": "free",
+        "category": "Fiction",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1717345018~exp=1717348618~hmac=5c00ac8c99d66d4f514ae08d2def74a6ddee0f9334e472040019744232bafc7c&w=740",
+        "title": "To Kill a Mockingbird"
+    },
+    {
+        "id": 2,
+        "name": "1984",
+        "price": "free",
+        "category": "Science Fiction",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1717345018~exp=1717348618~hmac=5c00ac8c99d66d4f514ae08d2def74a6ddee0f9334e472040019744232bafc7c&w=740",
+        "title": "1984"
+    },
+    {
+        "id": 3,
+        "name": "The Great Gatsby",
+        "price": "$12.99",
+        "category": "Classic",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1717345018~exp=1717348618~hmac=5c00ac8c99d66d4f514ae08d2def74a6ddee0f9334e472040019744232bafc7c&w=740",
+        "title": "The Great Gatsby"
+    },
+    {
+        "id": 4,
+        "name": "Harry Potter and the Sorcerer's Stone",
+        "price": "$9.99",
+        "category": "Fantasy",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1717345018~exp=1717348618~hmac=5c00ac8c99d66d4f514ae08d2def74a6ddee0f9334e472040019744232bafc7c&w=740",
+        "title": "Harry Potter and the Sorcerer's Stone"
+    },
+    {
+        "id": 5,
+        "name": "The Catcher in the Rye",
+        "price": "$11.99",
+        "category": "Literature",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1717345018~exp=1717348618~hmac=5c00ac8c99d66d4f514ae08d2def74a6ddee0f9334e472040019744232bafc7c&w=740",
+        "title": "The Catcher in the Rye"
+    },
+    {
+        "id": 6,
+        "name": "Pride and Prejudice",
+        "price": "$6.99",
+        "category": "Romance",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1717345018~exp=1717348618~hmac=5c00ac8c99d66d4f514ae08d2def74a6ddee0f9334e472040019744232bafc7c&w=740",
+        "title": "Pride and Prejudice"
+    },
+    {
+        "id": 7,
+        "name": "The Hobbit",
+        "price": "free",
+        "category": "Fantasy",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1717345018~exp=1717348618~hmac=5c00ac8c99d66d4f514ae08d2def74a6ddee0f9334e472040019744232bafc7c&w=740",
+        "title": "The Hobbit"
+    },
+    {
+        "id": 8,
+        "name": "Moby Dick",
+        "price": "$13.99",
+        "category": "Classic",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1717345018~exp=1717348618~hmac=5c00ac8c99d66d4f514ae08d2def74a6ddee0f9334e472040019744232bafc7c&w=740",
+        "title": "Moby Dick"
+    },
+    {
+        "id": 9,
+        "name": "War and Peace",
+        "price": "$15.99",
+        "category": "Historical",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1717345018~exp=1717348618~hmac=5c00ac8c99d66d4f514ae08d2def74a6ddee0f9334e472040019744232bafc7c&w=740",
+        "title": "War and Peace"
+    },
+    {
+        "id": 10,
+        "name": "The Alchemist",
+        "price": "free",
+        "category": "Philosophy",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1717345018~exp=1717348618~hmac=5c00ac8c99d66d4f514ae08d2def74a6ddee0f9334e472040019744232bafc7c&w=740",
+        "title": "The Alchemist"
+    }
+]
