@@ -1,24 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Cards from './Cards';
 import {Link} from "react-router-dom"
-import axios from "axios";
+import { ShopContext } from '../context/ShopContext';
 
 const Course = () => {
 
-  const [book,setbook]=useState([]);
-  useEffect(()=>{
-    const getBook=async ()=>{
-      try{
-       const res=await axios.get("http://localhost:4000/book");
-       console.log(res.data.data);
-       setbook(res.data.data);
-      //  console.log(book);
-      }catch(error){
-        console.log(error);
-      }
-    }
-    getBook();
-  },[]);
+  const {book,isLoading}=useContext(ShopContext);
+
+  if (isLoading) {
+    return <p>Loading books...</p>; 
+  }
 
   return (
     <div className='max-w-screen-2xl container mx-auto md:px-20 px-4 '>

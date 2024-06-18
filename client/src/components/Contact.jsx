@@ -1,20 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import {Link} from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom";
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
+  const [loading, setLoading] = useState(false);
+  const navigate=useNavigate();
 
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-      } = useForm()
-    
-      const onSubmit = (data) => console.log(data)
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset
+  } = useForm();
+
+  const SERVICE_ID = import.meta.env.VITE_REACT_SERVICE_ID;
+  const TEMPLATE_ID = import.meta.env.VITE_REACT_TEMPLATE_ID;
+  const API_KEY = import.meta.env.VITE_REACT_API_KEY;
+
+  const onSubmit = (data) => {
+    setLoading(true);
+    emailjs
+      .send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        {
+          from_name: data.name,
+          to_name: "Shreya Joshi",
+          from_email: data.email,
+          to_email: "joshi2003shreya@gmail.com",
+          message: data.message,
+        },
+        API_KEY
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert("Thank you. I will get back to you as soon as possible.");
+          reset();
+          navigate("/");
+        },
+        (error) => {
+          setLoading(false);
+          console.log(error);
+          alert("Something went wrong");
+        }
+      );
+  };
 
   return (
     <div>
-      <div className="flex h-screen items-center justify-center border ">
+      <div className="flex h-screen items-center justify-center border">
         <div className="modal-box">
           <form onSubmit={handleSubmit(onSubmit)}>
             <Link
@@ -30,14 +66,14 @@ const Contact = () => {
               <span>Name</span>
               <br />
               <input
-                type="name"
+                type="text"
                 placeholder="Enter your fullname"
                 className="w-80 px-3 py-1 mt-1 border rounded-md outline-none"
                 {...register("name", { required: true })}
               />
               <br />
               {errors.name && (
-                <span className=" text-sm text-red-600">
+                <span className="text-sm text-red-600">
                   This field is required
                 </span>
               )}
@@ -62,35 +98,27 @@ const Contact = () => {
               <span>Message</span>
               <br />
               <textarea
-                type="message"
                 placeholder="Enter your message"
                 className="w-80 px-3 py-1 mt-2 border rounded-md outline-none"
                 {...register("message", { required: true })}
               />
               <br />
-              {/* {errors.message && (
-                <span classname="text-sm text-red-600">
+              {errors.message && (
+                <span className="text-sm text-red-600">
                   This field is required
                 </span>
-              )} */}
+              )}
+              <br />
             </div>
 
             <div className="flex justify-around mt-4">
-              <button className="bg-pink-500 text-white rounded-md px-3 py-1 hover:bg-pink-700 duration-200">
-                Message
+              <button
+                type="submit"
+                className="bg-pink-500 text-white rounded-md px-3 py-1 hover:bg-pink-700 duration-200"
+                disabled={loading}
+              >
+                {loading ? "Sending..." : "Message"}
               </button>
-              {/* <p>
-                Have an account?{" "}
-                <button
-                  className="underline text-blue-500 cursor-pointer"
-                  onClick={() =>
-                    document.getElementById("my_modal_3").showModal()
-                  }
-                >
-                  Login
-                </button>
-                <Login />
-              </p> */}
             </div>
           </form>
         </div>

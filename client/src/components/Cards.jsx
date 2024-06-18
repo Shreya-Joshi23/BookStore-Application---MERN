@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ShopContext } from "../context/ShopContext";
 
 const Cards = ({item}) => {
+
+  const {addtocart,cartItems}=useContext(ShopContext);
+
   return (
     <>
-    <div className="mt-4 my-3 p-3">
+    <div className="mt-4 my-3 p-3 cursor-pointer">
       <div className=" card card-compact w-96 bg-base-100 shadow-xl hover:scale-105 duration-200 dark:bg-slate-900 dark:text-white dark:border">
         <figure>
           <img
@@ -18,7 +22,8 @@ const Cards = ({item}) => {
           <p>{item.title}</p>
           <div className="card-actions justify-between">
             <div className="badge badge-outline">{item.price}</div>
-            <div className="badge badge-outline px-2 py-2 rounded-full border-black border-[2px] hover:bg-pink-500">Buy Now</div>
+            <div className="badge badge-outline px-2 py-2 rounded-full cursor-pointer border-black border-[2px] hover:bg-pink-500" onClick={()=>addtocart(item.id)}>Add to Cart {cartItems[item.id]>0?<>({cartItems[item.id]})</>:null}</div>
+            <div className="badge badge-outline px-2 py-2 rounded-full cursor-pointer border-black border-[2px] hover:bg-pink-500">Buy Now</div>
           </div>
         </div>
       </div>

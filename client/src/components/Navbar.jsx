@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Login from "./Login";
 import { useAuth } from "../context/AuthProvider";
 import Logout from "./Logout";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [theme, settheme] = useState(
@@ -50,7 +51,10 @@ const Navbar = () => {
         <a href="/contact">Contact</a>
       </li>
       <li>
-        <a>About</a>
+        <Link to="/cart">Your cart</Link>
+      </li>
+      <li>
+        <Link to="/" onClick={()=>window.scrollTo(0,0)}>About</Link>
       </li>
     </>
   );
@@ -88,9 +92,9 @@ const Navbar = () => {
             {navItems}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl  font-bold cursor-pointer">
+        <Link to="/" onClick={()=>window.scrollTo(0,0)} className="btn btn-ghost text-xl  font-bold cursor-pointer">
           BookStore
-        </a>
+        </Link>
       </div>
 
       <div className="navbar-end">

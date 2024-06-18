@@ -1,25 +1,19 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Cards from './Cards';
-import axios from "axios"
+import { ShopContext } from '../context/ShopContext';
+
 
 const Sastibook = () => {
 
-  const [book,setbook]=useState([]);
-  useEffect(()=>{
-    const getBook=async ()=>{
-      try{
-       const res=await axios.get("http://localhost:4000/book");
-       console.log(res.data.data);
-       setbook(res.data.data);
-      }catch(error){
-        console.log(error);
-      }
-    }
-    getBook();
-  },[]);
+  const {book,isLoading}=useContext(ShopContext);
+
+  if (isLoading) {
+    return <p>Loading books...</p>; 
+  }
+
 
   const settings = {
     dots: true,
@@ -62,7 +56,7 @@ const Sastibook = () => {
      return (
        <div className='mt-12 max-w-screen-2xlcontainer mx-auto md:px-20 px-4'>
          <h1 className=' font-semibold text-xl pb-2'>Free Offered Books</h1>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ratione ullam earum exercitationem repellat at voluptatem deleniti mollitia illo, tempora obcaecati, fuga quis totam ut quod dolores debitis voluptates voluptatibus?</p>
+         <p>At BookStore, we believe in the power of reading and its ability to transform lives. To help spread the joy of reading, we offer a selection of books for free. Explore our curated collection of timeless classics and beloved novels, available for you at no cost. Dive into these literary treasures and discover new worlds and perspectives.</p>
          <Slider {...settings}>
         {
           filterdata.map((item)=>{
