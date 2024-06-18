@@ -11,3 +11,23 @@
 <li>Free Books: Access a selection of free books available for all users.</li>
 </ul>
 
+## TechStack
+  ## Frontend 
+   <ul>
+     <li>React vite</li>
+     <li>Tailwind css</li>
+     <li>DaisyUI</li>
+   </ul>
+   
+   ## Backend
+   <ul>
+     <li>Nodejs</li>
+     <li>Express</li>
+     <li>Mongoose</li>
+     <li>Database:Mongodb</li>
+   </ul>
+
+## Contributions
+Contributions are welcome! Please fork the repository and submit a pull request.
+   
+
