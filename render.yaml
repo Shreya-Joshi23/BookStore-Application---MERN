@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: server
+    env: node
+    repo: https://github.com/yourusername/Bookstore
+    buildCommand: cd server && npm install
+    startCommand: cd server && npm run server
+    plan: free
+
+  - type: web
+    name: client
+    env: static
+    repo: https://github.com/yourusername/Bookstore
+    buildCommand: cd client && npm install && npm run build
+    staticPublishPath: client/build
+    plan: free
