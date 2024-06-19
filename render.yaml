@@ -2,7 +2,7 @@ services:
   - type: web
     name: server
     env: node
-    repo: https://github.com/yourusername/Bookstore
+    repo: https://github.com/Shreya-Joshi23/BookStore-Application---MERN
     buildCommand: cd server && npm install
     startCommand: cd server && npm run server
     plan: free
@@ -10,7 +10,7 @@ services:
   - type: web
     name: client
     env: static
-    repo: https://github.com/yourusername/Bookstore
+    repo: https://github.com/Shreya-Joshi23/BookStore-Application---MERN
     buildCommand: cd client && npm install && npm run build
     staticPublishPath: client/build
     plan: free
