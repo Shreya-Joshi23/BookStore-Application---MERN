@@ -27,6 +27,56 @@
      <li>Database:Mongodb</li>
    </ul>
 
+## Installation
+
+To get started with this project, follow these steps:
+
+1. Clone the repository to your local machine:
+
+```bash
+https://github.com/Shreya-Joshi23/BookStore-Application---MERN.git
+```
+2. Navigate to the server directory
+  ```bash
+  cd server
+  ```
+3. Create a .env file and add the following environment variables:
+  ```bash
+  port=4000
+  mongoUri="mongodb+srv://<yourusername>:<tourpassword>@cluster0.i8qwwzn.mongodb.net/Bookstore?retryWrites=true&w=majority&appName=Cluster0"
+  ACCESS_SECRET_TOKEN="Your secret token"
+  ```
+4. Install dependencies using npm:
+  ```bash
+  npm install
+  ```
+5. Navigate to the client directory
+   ```bash
+   cd client
+   ```
+6. Create a .env file and add the following environment variables:
+  ```bash
+  VITE_REACT_SERVICE_ID='Your emailjs serviceId'
+  VITE_REACT_TEMPLATE_ID='Your emailjs templateId'
+  VITE_REACT_API_KEY='Your emailjs Key'
+  ```
+7. Run npm install to install dependencies for the client
+  ```bash
+  npm install
+  ```
+
+## Usage
+1. Start the server: npm run server (inside the server directory)
+   ```bash
+   npm run server
+   ```
+3. Start the client: npm run dev (inside the client directory)
+   ```bash
+   npm run dev
+   ```
+
+The application should now be running at http://localhost:5173.
+
 ## Contributions
 Contributions are welcome! Please fork the repository and submit a pull request.
    
