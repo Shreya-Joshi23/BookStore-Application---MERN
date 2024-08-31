@@ -8,7 +8,7 @@ const port=process.env.port || 3000;
 
 app.use(express.json());
 app.use(cors({
-  origin: 'https://bookstore-application-mern-2.onrender.com/', 
+  origin: 'https://bookstore-application-mern-2.onrender.com', 
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
