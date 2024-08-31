@@ -7,7 +7,11 @@ const {connection}=require("./db");
 const port=process.env.port || 3000;
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: 'https://book-store-application-mern.vercel.app/', // Replace with your Vercel frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
 
 //Defining routes
 const bookroute=require("./routes/bookroutes");
