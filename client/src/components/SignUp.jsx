@@ -24,7 +24,7 @@ const SignUp = () => {
     };
 
     await axios
-      .post("http://localhost:4000/user/register", userInfo)
+      .post(`https://bookstore-application-mern-1.onrender.com/user/register`, userInfo)
       .then((res) => {
         console.log(res.data);
         if (res.data) {
